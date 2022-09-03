@@ -22,6 +22,9 @@
         <list action="['say', 'sing']" :msg="msg" :human="human" @fn="onFn" @toGradeParentEvent="toGradeParentEvent"></list>
         <a-button type="primary" @click="msg='你好世界'">更新MSG</a-button>
       </a-col>
+      <a-col :span="20">
+        <parent></parent>
+      </a-col>
     </a-row>
   </div>
 </template>
@@ -35,6 +38,7 @@ import RefsRef from '@/components/api/Refs-Ref/index.vue'
 import Watch from '@/components/api/watch/index.vue'
 import IsrefUnref from '@/components/api/isRef-unRef/index.vue'
 import List from '@/components/ParentChildren/list.vue'
+import Parent from '@/components/mitt/Parent.vue'
 
 const msg = ref('hello')
 const human = reactive({

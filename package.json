@@ -11,6 +11,7 @@
   "dependencies": {
     "@types/node": "^18.7.3",
     "ant-design-vue": "^3.2.11",
+    "mitt": "^3.0.0",
     "unplugin-auto-import": "^0.11.2",
     "vue": "^3.2.37"
   },

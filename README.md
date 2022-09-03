@@ -117,3 +117,8 @@ withDefault
     ageList: () =>  [10,20]
   })  
 ```
+mitt
+> 兄弟组件间数据传递
+```
+npm install mitt -S
+```
