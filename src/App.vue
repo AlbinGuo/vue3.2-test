@@ -14,6 +14,9 @@
       <a-col :span="20">
         <refs-ref></refs-ref>
       </a-col>
+      <a-col :span="20">
+        <watch></watch>
+      </a-col>
     </a-row>
   </div>
 </template>
@@ -24,6 +27,7 @@ import HelloWorld from '@/components/HelloWorld.vue'
 import RefReactive from '@/components/api/ref-reactive/index.vue'
 import Computed from '@/components/api/computed/index.vue'
 import RefsRef from '@/components/api/Refs-Ref/index.vue'
+import Watch from '@/components/api/watch/index.vue'
 
 const state = reactive<{a?:number, b?:string}>({
   a: 1,
