@@ -122,3 +122,23 @@ mitt
 ```
 npm install mitt -S
 ```
+mitt.js
+```js
+import mitt from 'mitt'
+const emitter = mitt()
+export default emitter;
+```
+```js
+import emitter from '../../plugins/mitt.js';
+const send = () => {
+  emitter.emit('send', '来自哥哥的问候')
+}
+```
+```js
+import emitter from '../../plugins/mitt.js';
+
+const greeting = ref('')
+emitter.on('send', e => {
+  greeting.value = e
+})
+```
