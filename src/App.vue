@@ -1,12 +1,18 @@
 <template>
   <div>{{ state }}</div>
   <div style="background-color: #ececec; padding: 20px">
-    <a-row :gutter="16" :justify="space-between">
+    <a-row :gutter="16">
       <a-col :span="20">
         <hello-world name="张三" @on-yeye="clickE"/>
       </a-col>
       <a-col :span="20">
         <ref-reactive></ref-reactive>
+      </a-col>
+      <a-col :span="20">
+        <computed></computed>
+      </a-col>
+      <a-col :span="20">
+        <refs-ref></refs-ref>
       </a-col>
     </a-row>
   </div>
@@ -16,6 +22,8 @@
 import { provide, reactive } from 'vue';
 import HelloWorld from '@/components/HelloWorld.vue'
 import RefReactive from '@/components/api/ref-reactive/index.vue'
+import Computed from '@/components/api/computed/index.vue'
+import RefsRef from '@/components/api/Refs-Ref/index.vue'
 
 const state = reactive<{a?:number, b?:string}>({
   a: 1,

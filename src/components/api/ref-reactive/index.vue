@@ -25,7 +25,8 @@
         type="primary"
         size="small"
         @click="onAddBallToArray(ballName)">添加</a-button>
-    <span>{{ ballArray }}</span>
+    <div>{{ ballArray }}</div>
+    <div>{{ ballArray2 }}</div>
     <br>
 
     <a-input
@@ -44,10 +45,10 @@
 </template>
 
 <script setup lang="ts">
-import {reactive, ref} from "vue";
-import type { Ref } from "vue";
 
 // number
+import {Ref} from "vue";
+
 let counter = ref(0);
 // boolean
 let isShow = ref(false);
@@ -58,6 +59,7 @@ let ballName = ref<string>();
 let stuName = ref<string>();
 // array
 let ballArray = ref<string[]>([]);
+let ballArray2 = reactive<string[]>([]);
 
 const year: Ref<string | number> = ref('2022')
 
@@ -84,6 +86,7 @@ const onShow = () => {
 }
 const onAddBallToArray = (ball: string) => {
   ballArray.value.push(ball);
+  ballArray2.push(ball)
 }
 const onUpdateStudentInfo = (sname: string) => {
   studentInfo.name = sname
