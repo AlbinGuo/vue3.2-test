@@ -1,6 +1,21 @@
+<template>
+  <div>{{ state }}</div>
+  <div style="background-color: #ececec; padding: 20px">
+    <a-row :gutter="16" :justify="space-between">
+      <a-col :span="20">
+        <hello-world name="张三" @on-yeye="clickE"/>
+      </a-col>
+      <a-col :span="20">
+        <ref-reactive></ref-reactive>
+      </a-col>
+    </a-row>
+  </div>
+</template>
+
 <script setup lang="ts">
-import HelloWorld from '@/components/HelloWorld.vue'
 import { provide, reactive } from 'vue';
+import HelloWorld from '@/components/HelloWorld.vue'
+import RefReactive from '@/components/api/ref-reactive/index.vue'
 
 const state = reactive<{a?:number, b?:string}>({
   a: 1,
@@ -12,11 +27,6 @@ const clickE = (args1: string, args2: Array<number>) => {
   console.log('爷爷组件==', args1, args2)
 } 
 </script>
-
-<template>
-  <div>{{ state }}</div>
-  <HelloWorld name="张三" @on-yeye="clickE"/>
-</template>
 
 <style scoped>
 .logo {

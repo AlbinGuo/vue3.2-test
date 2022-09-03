@@ -1,3 +1,22 @@
+<template>
+  <a-card title="DEMO">
+    <template #extra></template>
+    <div>{{ state }}</div>
+    <define-props :ageList=[25,23,45,100]></define-props>
+    <define-emits @on-event="onEvent" @on-ye="onYe"></define-emits>
+    <define-expose ref="child"></define-expose>
+    <slots-attrs a="1" b="2" msg="hello" style="{color:red;}">
+      <template #header>
+        我是父组件插槽****
+        <span>aaaaa</span>
+      </template>
+      <template #body>
+        我是父组件插槽体BODY
+      </template>
+    </slots-attrs>
+  </a-card>
+</template>
+
 <script setup lang="ts">
 import { onMounted, ref, inject } from 'vue'
 import DefineProps from 'com/DefineProps.vue'
@@ -34,22 +53,6 @@ onMounted(() => {
   }
 })
 </script>
-
-<template>
-  <div>{{ state }}</div>
-  <define-props :ageList=[25,23,45,100]></define-props>
-  <define-emits @on-event="onEvent" @on-ye="onYe"></define-emits>
-  <define-expose ref="child"></define-expose>
-  <slots-attrs a="1" b="2" msg="hello" style="{color:red;}">
-    <template #header>
-      我是父组件插槽
-      <span>aaaaa</span>
-    </template>
-    <template #body>
-      我是父组件插槽体BODY
-    </template>
-  </slots-attrs>
-</template>
 
 <style scoped>
 .read-the-docs {
