@@ -36,7 +36,40 @@ const onUpdate = () => {
 ```
 
 ### computed() - 计算属性
-> s
+> 通过计算属性对数据进行二次计算
+```ts
+const authorInfo = reactive(
+    {
+      name: 'John',
+      age: 50,
+      fullName:computed(() => {
+        return authorInfo.name + 'Doe'
+      }),
+      books: [
+        'Vue 2 - Advanced Guide',
+        'Vue 3 - Basic Guide',
+        'Vue 4 - The Mystery'
+      ]
+    }
+)
+
+const bookCount = computed(() => {
+  return authorInfo.books.length ?? 0
+})
+const bookCount2 = computed({
+  get(){
+    return authorInfo.name + "~约翰"
+  },
+  set(v){
+    console.log('v:', v)
+    authorInfo.name = v
+  }
+})
+
+const onUpdate = () => {
+  bookCount2.value = 'ssssssss'
+}
+```
 
 
 ## 事件
