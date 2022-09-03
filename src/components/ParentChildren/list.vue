@@ -4,9 +4,21 @@
     <div>{{ human }}</div>
     <a-button type="primary" @click="onUpdate">更新</a-button>
     <div>
-      父组件action==={{ action }}
+
+      <div>
+        父组件v-model:num==={{ num }}
+      </div>
+      <div>
+        父组件action==={{ action }}
+      </div>
+
 <!--      使用v-bind="$attrs"处理孙子组件直接向爷爷组件发送事件-->
-      <item :msg="msg" :action="action" @toGradeParentEvent="toGradeParentEvent" v-bind="$attrs"></item>
+      <item
+          v-model:num="num"
+          :msg="msg"
+          :action="action"
+          @toGradeParentEvent="toGradeParentEvent"
+          v-bind="$attrs"></item>
     </div>
   </a-card>
 </template>
@@ -31,6 +43,7 @@ const props = defineProps({
     type: Array<string>
   }
 })
+const num = ref(0)
 const { msg, human, action } = toRefs(props)
 
 const onUpdate = () => {
