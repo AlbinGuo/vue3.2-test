@@ -45,6 +45,7 @@
 
 <script setup lang="ts">
 import {reactive, ref} from "vue";
+import type { Ref } from "vue";
 
 // number
 let counter = ref(0);
@@ -58,12 +59,18 @@ let stuName = ref<string>();
 // array
 let ballArray = ref<string[]>([]);
 
+const year: Ref<string | number> = ref('2022')
+
 interface Student {
   name: string,
   age: number,
   height?: number
 }
 // object
+let studentInfo2 = ref<Student>({
+  name: '李四',
+  age: 30,
+});
 let studentInfo = reactive<Student>({
   name: '张三',
   age: 20,
