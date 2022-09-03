@@ -35,6 +35,25 @@ const onUpdate = () => {
 }
 ```
 
+### isRef() & unref()
+isRef
+> 检查某个值是否为ref
+```ts
+let foo: unknown
+if (isRef(foo)) {
+  // foo 的类型被收窄为了 Ref<unknown>
+  foo.value
+}
+```
+unref
+> 如果参数是 ref，则返回内部值，否则返回参数本身。这是 val = isRef(val) ? val.value : val 计算的一个语法糖。
+```ts
+function useFoo(x: number | Ref<number>) {
+  const unwrapped = unref(x)
+  // unwrapped 现在保证为 number 类型
+}
+```
+
 ### computed() - 计算属性
 > 通过计算属性对数据进行二次计算
 ```ts
