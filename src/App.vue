@@ -18,7 +18,9 @@
         <watch></watch>
       </a-col>
       <a-col :span="20">
-        <isref-unref></isref-unref>
+        <div>msg:{{ msg }}</div>
+        <list action="['say', 'sing']" :msg="msg" :human="human" @fn="onFn" @toGradeParentEvent="toGradeParentEvent"></list>
+        <a-button type="primary" @click="msg='你好世界'">更新MSG</a-button>
       </a-col>
     </a-row>
   </div>
@@ -32,6 +34,21 @@ import Computed from '@/components/api/computed/index.vue'
 import RefsRef from '@/components/api/Refs-Ref/index.vue'
 import Watch from '@/components/api/watch/index.vue'
 import IsrefUnref from '@/components/api/isRef-unRef/index.vue'
+import List from '@/components/ParentChildren/list.vue'
+
+const msg = ref('hello')
+const human = reactive({
+  name: '人类',
+  height: 180,
+  hobby: ['篮球','RAP']
+})
+const onFn = (msg: string, data: Array<string>) => {
+  console.log(msg, data)
+}
+const toGradeParentEvent = (data: string) => {
+  console.log('==爷爷组件toGradeParentEvent===', data)
+}
+
 
 const state = reactive<{a?:number, b?:string}>({
   a: 1,

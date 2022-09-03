@@ -92,10 +92,28 @@ const onUpdate = () => {
 
 
 ## 事件
-
+defineEmits
+```ts
+const emits = defineEmits<{
+  (e: 'fn', name: string, data: Array<string>): void
+}>()
+```
 
 ## 插件
 unplugin-auto-import
 > 解决场景：<br>在组建开发中无需每次都引入import { ref... }
 1. 下载`npm i unplugin-auto-import`
 2. 配置：vite.config.
+## Hooks
+withDefault
+> 作用是给defineProps绑定默认值的api
+```ts
+  const defaultProps = withDefaults(defineProps<{
+    name: string,
+    msg: string,
+    ageList: Array<number>
+  }>(), {
+    msg: '默认张三',
+    ageList: () =>  [10,20]
+  })  
+```
