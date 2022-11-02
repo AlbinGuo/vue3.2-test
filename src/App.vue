@@ -25,6 +25,9 @@
       <a-col :span="20">
         <parent></parent>
       </a-col>
+      <a-col :span="20">
+        <compose></compose>
+      </a-col>
     </a-row>
   </div>
 </template>
@@ -39,6 +42,7 @@ import Watch from '@/components/api/watch/index.vue'
 import IsrefUnref from '@/components/api/isRef-unRef/index.vue'
 import List from '@/components/ParentChildren/list.vue'
 import Parent from '@/components/mitt/Parent.vue'
+import Compose from '@/components/compose/index.vue'
 
 const msg = ref('hello')
 const human = reactive({
