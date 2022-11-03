@@ -5,11 +5,15 @@
   <div>
     <counter></counter>
   </div>
+  <div>
+    <expression></expression>
+  </div>
 </template>
 
 <script lang="ts" setup>
 import counter from './counter.vue';
 import vbind from './vbind.vue';
+import expression from './expression.vue'
 
 interface Attribute {
   id: string;
