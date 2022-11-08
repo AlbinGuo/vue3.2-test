@@ -28,6 +28,9 @@
       <a-col :span="20">
         <compose></compose>
       </a-col>
+        <a-col :span="20">
+            <guo-form></guo-form>
+        </a-col>
     </a-row>
   </div>
 </template>
@@ -43,6 +46,7 @@ import IsrefUnref from '@/components/api/isRef-unRef/index.vue'
 import List from '@/components/ParentChildren/list.vue'
 import Parent from '@/components/mitt/Parent.vue'
 import Compose from '@/components/compose/index.vue'
+import GuoForm from '@/components/compose/GuoForm.vue'
 
 const msg = ref('hello')
 const human = reactive({
