@@ -1,15 +1,12 @@
 // @ts-ignore
 import _ from 'lodash-es';
-
 var users = [
     { 'user': 'barney', 'age': 36, 'active': false },
-    { 'user': 'fred',   'age': 40, 'active': true }
+    { 'user': 'fred', 'age': 40, 'active': true }
 ];
-console.log('--------------------');
 // @ts-ignore
-console.log(_.reject(users, function(o) { return !o.active; }));
+console.log(_.reject(users, function (o) { return !o.active; }));
 // => objects for ['fred']
-
 // // `_.matches` 迭代简写
 // _.reject(users, { 'age': 40, 'active': true });
 // // => objects for ['barney']
@@ -21,3 +18,4 @@ console.log(_.reject(users, function(o) { return !o.active; }));
 // // `_.property` 迭代简写
 // _.reject(users, 'active');
 // // => objects for ['barney']
+//# sourceMappingURL=lodash-collection.js.map

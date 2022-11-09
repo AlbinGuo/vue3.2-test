@@ -81,6 +81,18 @@
     "core-js" "^3.15.1"
     "nanopop" "^2.1.0"
 
+"@types/lodash-es@^4.17.6":
+  "integrity" "sha512-R+zTeVUKDdfoRxpAryaQNRKk3105Rrgx2CFRClIgRGaqDTdjsm8h6IYA8ir584W3ePzkZfst5xIgDwYrlh9HLg=="
+  "resolved" "https://registry.npmjs.org/@types/lodash-es/-/lodash-es-4.17.6.tgz"
+  "version" "4.17.6"
+  dependencies:
+    "@types/lodash" "*"
+
+"@types/lodash@*":
+  "integrity" "sha512-zmEmF5OIM3rb7SbLCFYoQhO4dGt2FRM9AMkxvA3LaADOF1n8in/zGJlWji9fmafLoNyz+FoL6FE0SLtGIArD7w=="
+  "resolved" "https://registry.npmjs.org/@types/lodash/-/lodash-4.14.188.tgz"
+  "version" "4.14.188"
+
 "@types/node@^18.7.3":
   "integrity" "sha512-LJgzOEwWuMTBxHzgBR/fhhBOWrvBjvO+zPteUgbbuQi80rYIZHrk1mNbRUqPZqSLP2H7Rwt1EFLL/tNLD1Xx/w=="
   "resolved" "https://registry.npmmirror.com/@types/node/-/node-18.7.3.tgz"
@@ -503,9 +515,9 @@
   "resolved" "https://registry.npmmirror.com/local-pkg/-/local-pkg-0.4.2.tgz"
   "version" "0.4.2"
 
-"lodash-es@^4.17.15":
+"lodash-es@^4.17.15", "lodash-es@^4.17.21":
   "integrity" "sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw=="
-  "resolved" "https://registry.npmmirror.com/lodash-es/-/lodash-es-4.17.21.tgz"
+  "resolved" "https://registry.npmjs.org/lodash-es/-/lodash-es-4.17.21.tgz"
   "version" "4.17.21"
 
 "lodash@^4.17.21":
