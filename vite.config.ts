@@ -16,8 +16,29 @@ export default defineConfig({
   },
   plugins: [
     vue(),
-      AutoImport({
-        imports: ['vue', 'vue-router']
-      })
+    AutoImport({
+      imports: [
+        'vue',
+        'vue-router',
+        {
+          'lodash-es': [
+            'isEmpty',
+            'includes',
+            'ceil',
+            'defaultsDeep',
+            'toUpper',
+            'forEach',
+            'merge',
+            'filter',
+            'find',
+            'groupBy',
+            'map',
+            'size',
+            'slice',
+            'truncate',
+          ],
+        }
+        ]
+    }),
   ]
 })
