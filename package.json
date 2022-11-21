@@ -6,15 +6,22 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test:e2e": "npx playwright test",
+    "test:e2e:report": "npx playwright show-report",
+    "test:e2e:codegen": "npx playwright codegen localhost:3001"
   },
   "dependencies": {
+    "@playwright/experimental-ct-vue": "^1.28.0",
+    "@playwright/test": "^1.28.0",
     "@types/node": "^18.7.3",
     "@vueuse/core": "^9.4.0",
     "ant-design-vue": "^3.2.11",
     "lodash-es": "^4.17.21",
     "mitt": "^3.0.0",
+    "npx": "^10.2.2",
     "pinia": "^2.0.23",
+    "playwright": "^1.28.0",
     "unplugin-auto-import": "^0.11.2",
     "vue": "^3.2.37",
     "vue-router": "^4.1.6"
